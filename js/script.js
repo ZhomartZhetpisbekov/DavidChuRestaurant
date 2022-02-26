@@ -25,6 +25,8 @@ var menuItemsUrl = "https://www.davidchuschinabistro.com/menu_items.json?categor
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
+var aboutHtml = "snippets/about-snippet.html";
+
 // Convinience method for inserting innerHTML for 'select'
 var insertHTML = function (selector, html) {
 	var targetElem = document.querySelector(selector);
@@ -93,6 +95,15 @@ dc.loadMenuItems = function (categoryShort) {
 		buildAndShowMenuItemsHtml);
 };
 
+// Load About Page View
+dc.loadAboutPage = function () {
+	showLoading("#main-content");
+	$ajaxUtils.sendGetRequest(
+		aboutHtml,
+		buildAndShowAboutHtml,
+		false);
+}
+
 // Builds HTML for the categories page based on
 // the data from server
 function buildAndShowCategoriesHtml (categories) {
@@ -133,6 +144,12 @@ function buildAndShowMenuItemsHtml (menuItemsObject) {
 				false);
 		},
 		false);
+};
+
+// Build About View Html
+function buildAndShowAboutHtml (aboutHtml) {
+	var aboutViewHtml = aboutHtml;
+	insertHTML("#main-content", aboutViewHtml);
 };
 
 

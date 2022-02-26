@@ -307,6 +307,33 @@ h3.menu-item-title {
 }
 
 
+/* About Page */
+
+#aboutWebsite h2 {
+	text-align: center;
+	padding: 10px;
+}
+
+#aboutWebsite p {
+	padding-bottom: 25px;
+	font-size: 18px;
+	text-align: center;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+div#myselfPhoto img {
+	border-radius: 10px;
+}
+
+div#aboutMeText {
+	border: 1px solid green;
+	width: 50%;
+}
 
 
 
