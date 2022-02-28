@@ -72,6 +72,12 @@ body {
 	padding-right: 10px;
 }
 
+@media (max-width: 576px) {
+	#rest-name {
+		font-size: 1.1em;
+	}
+}
+
 /* End of header navbar */
 
 /* Start of main content */
@@ -294,7 +300,7 @@ h3.menu-item-title {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
 	.menu-item-tile .menu-item-price {
 		text-align: center;
 	}
@@ -320,23 +326,76 @@ h3.menu-item-title {
 	text-align: center;
 }
 
-header {
+/*header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
+}*/
+
 
 div#myselfPhoto img {
+	width: 100%;
 	border-radius: 10px;
 }
 
-div#aboutMeText {
-	border: 1px solid green;
-	width: 50%;
+
+#aboutMeText p {
+	font-size: 18px;
+	text-align: center;
+
+}
+
+#aboutMeText p:nth-child(4) {
+	padding-top: 10px;
+}
+
+.socials {
+	text-align: center;
+}
+
+.socials a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.socials ion-icon {
+	color: #fff;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 22px;
+    transition: 0.3s ease;
+}
+
+.socials ion-icon:hover {
+	color: #f6b319;
 }
 
 
+/* Awards Page */
 
+#awards h2 {
+	text-align: center;
+	padding: 10px;
+}
+
+#awards a {
+	text-decoration: none;
+	padding: 100px;
+	color: #fff;
+	text-align: center;
+	transition: 0.2s ease;
+	cursor: wait;
+}
+
+#awards a:hover {
+	color: #61122f;
+}
+
+@media (max-width: 991px) {
+	div#aboutMeText {
+		padding-top: 20px;
+	}
+}
 
 
 

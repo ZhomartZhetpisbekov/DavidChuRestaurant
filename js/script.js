@@ -27,6 +27,8 @@ var menuItemHtml = "snippets/menu-item.html";
 
 var aboutHtml = "snippets/about-snippet.html";
 
+var awardsHtml = "snippets/awards-snippet.html";
+
 // Convinience method for inserting innerHTML for 'select'
 var insertHTML = function (selector, html) {
 	var targetElem = document.querySelector(selector);
@@ -104,6 +106,15 @@ dc.loadAboutPage = function () {
 		false);
 }
 
+// Load Awards Page View
+dc.loadAwardsPage = function() {
+	showLoading("#main-content");
+	$ajaxUtils.sendGetRequest(
+		awardsHtml,
+		buildAndShowAwardsHtml,
+		false);
+};
+
 // Builds HTML for the categories page based on
 // the data from server
 function buildAndShowCategoriesHtml (categories) {
@@ -148,9 +159,13 @@ function buildAndShowMenuItemsHtml (menuItemsObject) {
 
 // Build About View Html
 function buildAndShowAboutHtml (aboutHtml) {
-	var aboutViewHtml = aboutHtml;
-	insertHTML("#main-content", aboutViewHtml);
+	insertHTML("#main-content", aboutHtml);
 };
+
+// Build and Show Awards View Html
+function buildAndShowAwardsHtml (awardsHtml) {
+	insertHTML("#main-content", awardsHtml);
+}
 
 
 // Builds categories view HTML 
