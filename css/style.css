@@ -74,9 +74,10 @@ body {
 
 @media (max-width: 576px) {
 	#rest-name {
-		font-size: 1.1em;
+		font-size: 80%;
 	}
 }
+
 
 /* End of header navbar */
 
